@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: aqua;
+}
+
+header {
+    position: relative;
+    padding: 2rem 2rem;
+    transition: 1s;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 80px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
+
+}
+
+.navbar .toggle-btn {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 100px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+
+.drop-menu.open {
+    height: 240px;
+}
+
+.drop-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .toggle-btn {
+        display: block;
+    }
+
+    .drop-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .drop-menu {
+        left: 2rem;
+        width: unset;
+
+    }
+
+}
+
+/*
+.home {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.home.active {
+    right: 300px;
+}
+*/
+
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 100px;
+    z-index: 2;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+
+}
+
+.text h1 {
+    font-size: 70px;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.text h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.text h3 {
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    color: #e5d3d3;
+    font-size: 24px;
+    margin-top: 10px;
+    transition: 2.3s;
+}
+
+.text p {
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+}
+
+.text a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 80%;
+    border-radius: 50%;
+    border: .2rem solid #112e42
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b29;
+    border-bottom: .2rem solid #081b29;
+    border-left: .2rem solid #9dadb8;
+    border-right: .2rem solid #9dadb8;
+
+}
+
+.about-content {
+    font-size: 20px;
+    color: #fff;
+    max-width: 700px;
+    margin: 10px auto;
+    justify-content: center;
+    text-align: center;
+}
+
+h4 {
+    margin: 5px;
+}
+
+.Skills {
+    width: 600px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+}
+
+.Skills li {
+    margin: 20px 0;
+    padding: 10px;
+
+}
+
+.bar {
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 02.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(0, 4, 11)0%, rgb(103, 207, 252)100%);
+}
+
+.html {
+    width: 85%;
+    animation: html 3s;
+}
+
+.css {
+    width: 85%;
+    animation: css 3s;
+}
+
+.java {
+    width: 60%;
+    animation: java 3s;
+}
+
+.python {
+    width: 70%;
+    animation: python 3s;
+}
+
+.sql {
+    width: 50%;
+    animation: sql 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+
+}
+
+@keyframes java {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+
+}
+
+@keyframes sql {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+    width: 400px;
+    margin: 30px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+.card-img {
+    border-radius: 20px 20px 0 0;
+    height: 300px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-1 {
+    background-image: url("/images/Wehack1.png");
+}
+
+.card-2 {
+    background-image: url("/images/data1.png");
+}
+
+.card h3 {
+    padding: 10px;
+    color: #fff;
+    font-size: 2em;
+}
+
+.card p {
+    padding: 10px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.card a {
+    background-color: #353b48;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    font-size: 24px;
+    border: 2px solid #353b48;
+    border-radius: 50px;
+    letter-spacing: 2px;
+}
+
+.card a:hover {
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+}
+
+footer {
+    width: 90%;
+    height: 10%;
+    margin: 60px auto;
+    color: #fff;
+    padding: 5%;
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+    position: relative;
+    bottom: 0;
+}
+
+.social {
+    position: relative;
+    z-index: 10;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 50px;
+    filter: invert(1);
+    transform: scale(3);
+    transition: 0.5s;
+    color: red;
+}
+
+.social li a:hover {
+    transform: scale(3) translateY(-15px);
+}
+
+@media (max-width: 991px) {
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text h3 {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+
+    }
+
+    .Skills {
+        width: 60%;
+    }
+
+    .about-content {
+        font-size: 1em;
+        max-width: 300px;
+    }
+
+    .about-img {
+        width: 15em;
+        height: 15em;
+    }
+
+
+}
+
+
+
+
+/*
+#081b29
+#112e42
+#ededed
+#00abf0
