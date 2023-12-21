@@ -277,6 +277,76 @@ h4 {
     margin: 5px;
 }
 
+/*************Projects***************/
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+    width: 300px;
+    height: 500px;
+    margin: 30px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+.card-img {
+    border-radius: 20px 20px 0 0;
+    height: 50%;
+    margin-bottom: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-1 {
+    background-image: url("images/Wehack1.png");
+}
+
+.card-2 {
+    background-image: url("images/data1.png");
+}
+
+.card-3 {
+    background-image: url("images/network.png");
+}
+
+.card h3 {
+    padding: 5px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.card p {
+    padding: 5px;
+    color: #fff;
+    font-size: 1em;
+}
+
+.card a {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    display: block;
+    text-align: center;
+    margin: 0 50px;
+    font-size: 24px;
+    border: 2px solid #353b48;
+    border-radius: 50px;
+    letter-spacing: 2px;
+}
+
+.card a:hover {
+    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+}
+
 /***********Skills***********/
 
 .Skills {
@@ -285,6 +355,7 @@ h4 {
     color: #fff;
     padding: 20px;
     box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
+    right: 0;
 }
 
 .Skills li {
@@ -395,75 +466,6 @@ h4 {
 
 }
 
-/*************Projects***************/
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    border-radius: 20px;
-    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
-    width: 300px;
-    height: 500px;
-    margin: 30px;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    transition: all 1s ease;
-}
-
-.card-img {
-    border-radius: 20px 20px 0 0;
-    height: 50%;
-    margin-bottom: 5px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.card-1 {
-    background-image: url("images/Wehack1.png");
-}
-
-.card-2 {
-    background-image: url("images/data1.png");
-}
-
-.card-3 {
-    background-image: url("images/network.png");
-}
-
-.card h3 {
-    padding: 5px;
-    color: #fff;
-    font-size: 1.5em;
-}
-
-.card p {
-    padding: 5px;
-    color: #fff;
-    font-size: 1em;
-}
-
-.card a {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    padding: 5px;
-    display: block;
-    text-align: center;
-    margin: 0 50px;
-    font-size: 24px;
-    border: 2px solid #353b48;
-    border-radius: 50px;
-    letter-spacing: 2px;
-}
-
-.card a:hover {
-    box-shadow: 0 14px 28px rgba(240, 239, 239, 0.25), 0 10px 10px rgba(228, 223, 223, 0.22);
-}
 
 footer {
     width: 90%;
